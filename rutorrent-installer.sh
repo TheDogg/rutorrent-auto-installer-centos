@@ -102,11 +102,11 @@ XMLRPC_SVN_DIR="https://svn.code.sf.net/p/xmlrpc-c/code/stable"
 LIBTORRENT_VERSION="0.13.4"
 LIBTORRENT_NAME="libtorrent-$LIBTORRENT_VERSION"
 LIBTORRENT_URL="http://libtorrent.rakshasa.no/downloads/$LIBTORRENT_NAME.tar.gz"
-LIBTORRENT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$LIBTORRENT_NAME.tar.gz/download"
+LIBTORRENT_URL2="http://web.archive.org/web/20140826221757/http://libtorrent.rakshasa.no/downloads/$LIBTORRENT_NAME.tar.gz"
 RTORRENT_VERSION="0.9.4"
 RTORRENT_NAME="rtorrent-$RTORRENT_VERSION"
 RTORRENT_URL="http://libtorrent.rakshasa.no/downloads/$RTORRENT_NAME.tar.gz"
-RTORRENT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/$RTORRENT_NAME.tar.gz/download"
+RTORRENT_URL2="http://web.archive.org/web/20140826221757/http://libtorrent.rakshasa.no/downloads/$RTORRENT_NAME.tar.gz"
 
 HTPASSWD_PY_SCRIPT_URL="http://trac.edgewall.org/export/10433/trunk/contrib/htpasswd.py"
 HTPASSWD_PY_SCRIPT_URL2="http://sourceforge.net/projects/autodl-irssi/files/inst-files/htpasswd.py/download"
@@ -883,7 +883,7 @@ getIpAddress() {
 	echo "${CMSG}Detecting your IP address...$CEND"
 	isValidIpAddress "$OUR_IP_ADDRESS" || OUR_IP_ADDRESS=$(wget --no-check-certificate http://www.whatismyip.com/automation/n09230945.asp -O - -o /dev/null)
 	isValidIpAddress "$OUR_IP_ADDRESS" || OUR_IP_ADDRESS=$(ifconfig -a | grep "inet addr" | head -n1 | awk -F: '{print $2}' | awk '{print $1}')
-	isValidIpAddress "$OUR_IP_ADDRESS" || OUR_IP_ADDRESS="1.2.3.4"
+	isValidIpAddress "$OUR_IP_ADDRESS" || OUR_IP_ADDRESS="149.56.89.166"
 }
 
 getNewPortNumber() {
